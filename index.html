@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vedha Vishal A · Java Backend Developer</title>
+  <meta name="description" content="Portfolio of Vedha Vishal A, a Java backend developer building Spring Boot microservices with Kafka, Docker and CI/CD.">
+  <meta property="og:title" content="Vedha Vishal A · Java Backend Developer">
+  <meta property="og:description" content="Spring Boot microservices, Kafka, Docker, CI/CD to Azure. Main project: Doora.">
+  <meta property="og:image" content="assets/doora.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314b8a6'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%230b0f14'%3EVV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">Vedha Vishal A</a>
+    <nav class="links" id="links" aria-label="Sections">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn menu-btn" id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="links">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="home" class="hero container">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="dot"></span>Open to full-time roles · can join immediately</p>
+      <h1>Vedha Vishal A</h1>
+      <p class="role">Java Backend Developer</p>
+      <p class="lede">I build backend systems with Java and Spring Boot, from service design to CI/CD and cloud deployment.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View work</a>
+        <a class="btn" href="assets/Vedha_Vishal_A_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+    <img class="avatar" src="assets/photo.jpg" alt="Vedha Vishal A" width="640" height="640">
+  </section>
+
+  <section id="about" class="container section">
+    <h2>About</h2>
+    <div class="about">
+      <div class="prose">
+        <p>I'm a 2026 Computer Science graduate from Amrita Vishwa Vidyapeetham who builds backend systems with Java and Spring Boot. I like owning a project end to end, from designing the services to CI/CD and cloud deployment.</p>      </div>
+      <dl class="facts">
+        <div><dt>Based in</dt><dd>Salem, Tamil Nadu</dd></div>
+        <div><dt>Looking for</dt><dd>Full-time backend developer roles</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="education" class="container section">
+    <h2>Education</h2>
+    <ol class="timeline">
+      <li>
+        <article class="card">
+          <p class="meta">2022 – 2026</p>
+          <h3>B.Tech in Computer Science and Engineering</h3>
+          <p class="sub">Amrita Vishwa Vidyapeetham</p>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <p class="meta">2022</p>
+          <h3>Higher Secondary (Class XII), CBSE</h3>
+          <p class="sub">Notre Dame of Holy Cross, Salem</p>
+        </article>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projects" class="container section">
+    <h2>Projects</h2>
+
+    <article class="card feature">
+      <a class="shot" href="https://doora.duckdns.org" target="_blank" rel="noopener">
+        <img src="assets/doora.jpg" alt="Doora home page" loading="lazy" width="1400" height="831">
+      </a>
+      <div class="feature-body">
+        <p class="meta">Main project · built solo</p>
+        <h3>Doora</h3>
+        <p class="body">A platform where local service providers like plumbers, electricians and cooks register, and clients book them.</p>
+        <ul class="bullets">
+          <li>Five Spring Boot microservices, each with its own MySQL database.</li>
+          <li>Booking lifecycle (Booked, Completed, Cancelled, QuoteDeclined, Expired) with an OTP check on arrival and a two-round quote flow.</li>
+          <li>Kafka events published after each commit, keyed by booking id across 3 partitions; an Email service sends updates to both sides.</li>
+          <li>Jenkins CI/CD: Maven build, JUnit tests, Docker images and deploy to Azure, with request-id tracing across services.</li>
+          <li>Load-tested with k6, Prometheus and Grafana. Found bottlenecks in Caddy's memory limit and in bcrypt hashing under login bursts.</li>
+        </ul>
+        <dl class="stats">
+          <div><dt>Throughput</dt><dd>450 req/s</dd></div>
+          <div><dt>Concurrent users</dt><dd>800</dd></div>
+          <div><dt>p95 latency</dt><dd>&lt; 60 ms</dd></div>
+          <div><dt>Errors</dt><dd>0%</dd></div>
+        </dl>
+        <ul class="tags">
+          <li>Java</li><li>Spring Boot</li><li>MySQL</li><li>Kafka</li><li>Docker</li><li>Jenkins</li><li>Azure</li><li>Caddy</li><li>k6</li><li>Grafana</li>
+        </ul>
+        <div class="card-links">
+          <a class="btn primary" href="https://doora.duckdns.org" target="_blank" rel="noopener">Live site</a>
+          <a class="btn" href="https://github.com/VedhaVishal/Doora-Project" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="grid">
+      <article class="card">
+        <p class="meta">Team of 3</p>
+        <h3>Violence Detection in Surveillance Video</h3>
+        <p class="body">Detects violence in surveillance clips from both appearance (RGB frames) and motion (optical flow), with a learned feature-fusion step and temporal attention to focus on the key moments.</p>
+        <ul class="tags"><li>Python</li><li>CNN</li><li>Optical flow</li></ul>
+        <div class="card-links"><a class="link" href="https://github.com/VedhaVishal/image-JOSENet" target="_blank" rel="noopener">GitHub →</a></div>
+      </article>
+      <article class="card">
+        <p class="meta">Team of 5</p>
+        <h3>Fraud Detection in Classroom Assignments</h3>
+        <p class="body">Checks batches of submissions for plagiarism and AI-written content, clusters similar answers, and shows the scores on a dashboard with automated PDF reports.</p>
+        <ul class="tags"><li>Python</li><li>Flask</li><li>MySQL</li></ul>
+        <div class="card-links"><a class="link" href="https://github.com/Aakash-Balasundaram/Fraud-Detection-in-class-assignments" target="_blank" rel="noopener">GitHub →</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="container section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-row"><h3>Languages</h3><ul class="tags"><li>Java</li><li>Python</li><li>SQL</li><li>HTML</li><li>CSS</li></ul></div>
+      <div class="skill-row"><h3>Backend</h3><ul class="tags"><li>Spring Boot</li><li>Spring Data JPA</li><li>REST APIs</li><li>Microservices</li><li>System Design</li></ul></div>
+      <div class="skill-row"><h3>Messaging</h3><ul class="tags"><li>Apache Kafka</li></ul></div>
+      <div class="skill-row"><h3>Databases</h3><ul class="tags"><li>MySQL</li></ul></div>
+      <div class="skill-row"><h3>DevOps &amp; Cloud</h3><ul class="tags"><li>Docker</li><li>Jenkins</li><li>Git</li><li>Maven</li><li>Caddy</li><li>Azure</li></ul></div>
+      <div class="skill-row"><h3>Testing</h3><ul class="tags"><li>JUnit</li><li>Testcontainers</li><li>Playwright</li><li>k6</li></ul></div>
+      <div class="skill-row"><h3>Monitoring</h3><ul class="tags"><li>Prometheus</li><li>Grafana</li><li>SonarQube</li></ul></div>
+      <div class="skill-row"><h3>Tools</h3><ul class="tags"><li>IntelliJ IDEA</li><li>VS Code</li><li>Postman</li><li>Jira</li></ul></div>
+    </div>
+  </section>
+
+  <section id="certificates" class="container section">
+    <h2>Certificates &amp; awards</h2>
+    <ul class="feats">
+      <li>
+        <div><h3>Master Spring Boot Development</h3><p class="sub">Telusko</p></div>
+        <a class="link" href="assets/telusko-spring-boot-certificate.pdf" target="_blank" rel="noopener">View certificate →</a>
+      </li>
+      <li><div><h3>Finalist, Generative AI Hackathon</h3><p class="sub">Hosted by Value Health · 2024</p></div></li>
+      <li><div><h3>Artificial Intelligence</h3><p class="sub">Infosys Springboard</p></div></li>
+      <li><div><h3>Deep Learning</h3><p class="sub">Infosys Springboard</p></div></li>
+    </ul>
+  </section>
+
+  <section id="contact" class="container section">
+    <h2>Contact</h2>
+    <p class="prose">I'm looking for full-time backend developer roles and can join immediately. Send me a message here or email me directly.</p>
+    <div class="contact">
+      <form class="card form" id="contact-form" novalidate>
+        <!-- Web3Forms: paste your access key below (see README.md) -->
+        <input type="hidden" name="access_key" value="483b9c30-80df-4a9f-874c-85421ae06809">
+        <input type="hidden" name="subject" value="New message from your portfolio">
+        <input type="hidden" name="from_name" value="Portfolio contact form">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <h3>Send me a message</h3>
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Your name">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="150" placeholder="you@gmail.com">
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" rows="5" required maxlength="3000" placeholder="Hi Vedha, ..."></textarea>
+        <button class="btn primary" type="submit" id="f-send">Send message</button>
+        <p class="form-status" id="f-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="contact-side">
+      <div class="card contact-card">
+        <p class="meta">Email</p>
+        <a href="mailto:vedhavishalarulanand@gmail.com" class="value">vedhavishalarulanand@gmail.com</a>
+        <button class="btn small" id="copy" type="button" data-copy="vedhavishalarulanand@gmail.com">Copy email</button>
+      </div>
+      <a class="card contact-card" href="https://www.linkedin.com/in/vedhavishal" target="_blank" rel="noopener">
+        <p class="meta">LinkedIn</p>
+        <span class="value">linkedin.com/in/vedhavishal</span>
+      </a>
+      <a class="card contact-card" href="https://github.com/VedhaVishal" target="_blank" rel="noopener">
+        <p class="meta">GitHub</p>
+        <span class="value">github.com/VedhaVishal</span>
+      </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="container footer">
+  <span>© <span id="year">2026</span> Vedha Vishal A</span>
+  <a href="#home">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
