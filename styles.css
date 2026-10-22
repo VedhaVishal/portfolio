@@ -66,11 +66,11 @@ p { margin: 0; }
   padding-top: clamp(56px, 12vh, 140px); padding-bottom: clamp(56px, 12vh, 140px);
 }
 .eyebrow {
-  display: inline-flex; flex-wrap: wrap; max-width: 100%; align-items: center; gap: 8px;
+  display: inline-flex; max-width: 100%; align-items: center; gap: 8px;
   font: 500 13px "Geist Mono", ui-monospace, monospace; color: var(--muted);
   border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; margin-bottom: 24px;
 }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 h1 { font-size: clamp(42px, 7vw, 76px); font-weight: 700; letter-spacing: -0.03em; }
 .role { font-size: clamp(19px, 2.4vw, 24px); font-weight: 500; margin-top: 12px; color: var(--accent); }
 .lede { color: var(--muted); max-width: 46ch; margin-top: 14px; font-size: 17px; }
