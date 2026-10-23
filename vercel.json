@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/resume", "destination": "/assets/Vedha_Vishal_A_Resume.pdf", "permanent": false }
+  ]
+}
